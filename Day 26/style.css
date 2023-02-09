@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: #3e4152;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation{
+    width: 75px;
+    background-color: #fff;
+    position: fixed;
+    inset: 20px 0 20px 20px; 
+    /* inset như thuộc tính margin nhưng dành cho position: fixed/absolute */
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navigation.open{
+    width: 250px;
+}
+
+.menuToggle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 23px;
+    cursor: pointer;
+}
+
+.menuToggle::before{
+    content: '';
+    position: absolute;
+    width: 29px;
+    height: 2px;
+    background-color: #333;
+    transform: translateY(-8px);
+    transition: 0.5s;
+}
+
+.menuToggle::after{
+    content: '';
+    position: absolute;
+    width: 29px;
+    height: 2px;
+    background-color: #333;
+    transform: translateY(8px);
+    transition: 0.5s;
+    box-shadow: 0 -8px 0 #333;
+}
+
+.menuToggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+}
+
+
+.menuToggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: unset;
+}
+
+.navigation ul{
+    padding: 0;
+    margin-left: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    transition: 0.5s;
+}
+
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 55px;
+    height: 55px;
+    line-height: 60px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.navigation ul li a .text{
+    position: relative;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.navigation ul li.active{
+    transform: translateX(30px);
+}
+
+.navigation.open ul li.active{
+    transform: translateX(10px);
+}
+
+.navigation ul li:hover a .icon{
+    transition: 0.5s;
+    background-color: rgba(0,0,0,0.08)
+}
+
+.navigation ul li.active a .icon{
+    color: #fff;
+    background-color: var(--clr);
+}
+
+.navigation ul li.active a .text{
+   color: var(--clr);
+}
+
+.navigation.open ul li a .text{
+    opacity: 1;
+    visibility: visible;
+    opacity: 1;
+}
+
+.navigation ul li a .icon::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr);
+    filter: blur(8px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.navigation ul li.active a .icon::before{
+    opacity: 1;
+}
+
+

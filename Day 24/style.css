@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: #6890eb;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 450px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.cards{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: calc(100% / 4 - 10px);
+    height: calc(100% / 4 - 10px);
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+
+}
+
+.view{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s linear;
+    backface-visibility: hidden;
+}
+
+.back-view img{
+    max-width: 45px;
+}
+
+.back-view{
+    transform: rotateY(-180deg);
+}
+
+.front-view ion-icon{
+    color: #6890eb;
+    font-size: 45px;
+}
+
+.card.active .back-view{
+    transform: rotateY(0);
+}
+
+.card.active .front-view{
+    transform: rotateY(180deg);
+}
+
+.card.shake{
+    animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake{
+    0%, 100%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-13px);
+    }
+    40%{
+        transform: translateX(13px);
+    }
+    60%{
+        transform: translateX(-8px);
+    }
+    80%{
+        transform: translateX(8px);
+    }
+}

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: #7c2ade;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal-btn{
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px 25px;
+    color: #7c2ade;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.modal-btn:hover{
+    opacity: 0.9;
+}
+
+.wrapper{
+    position: absolute;
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.wrapper.active{
+    transform: scale(1);
+    visibility:visible;
+    opacity: 1;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.btn-close{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 22px;
+    background-color: #f0f0f0;
+    color: #666;
+    cursor: pointer;
+}
+
+.share-title, .copy-title{
+    padding: 20px 0;
+}
+
+.share-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.share-item{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.share-item.facebook a{
+    color: #1b75ea;
+    border: 1px solid #1b75ea;
+}
+
+.share-item.twitter a{
+    color: #46bcef;
+    border: 1px solid #46bcef;
+}
+
+.share-item.whatsapp a{
+    color: #70d597;
+    border: 1px solid #70d597;
+}
+
+.share-item.instagram a{
+    color: #e48da7;
+    border: 1px solid #e48da7;
+}
+
+.share-item.telegram a{
+    color: #0086c3;
+    border: 1px solid #0086c3;
+}
+
+.share-item a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.share-item a:hover{
+    font-size: 27px;
+    color: #fff;
+    border-color: transparent;
+}
+
+
+.share-item.facebook a:hover{
+    background-color: #1b75ea;
+}
+
+.share-item.twitter a:hover{
+    background-color: #46bcef;
+}
+
+.share-item.instagram a:hover{
+    background-color: #e48da7;
+}
+
+.share-item.whatsapp a:hover{
+    background-color: #70d597;
+}
+
+.share-item.telegram a:hover{
+    background-color: #0086c3;
+}
+
+.share-link{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid #c5c3c3;
+}
+
+.share-link input{
+    font-size: 16px;
+    line-height: 25px;
+    flex: 1;
+    margin-right: 5px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.share-link input::selection{
+    background-color: #7c2ade;
+    color: #fff;
+}
+
+.share-link i{
+    font-size: 25px;
+}
+
+.share-link button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #7c2ade;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.share-link button:hover{
+    opacity: 0.9;
+}
+
+

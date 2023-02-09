@@ -1,0 +1,12 @@
+.header{
+    border-radius: unset;
+    border: unset;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}

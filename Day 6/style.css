@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right,#D1913C,#dc2430 );
+    padding: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-box{
+    width: 900px;
+    height: 100%;
+    background-color: #22242c;
+    border-radius: 20px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.search-wrapper{
+    max-width: 500px;
+    height: 42px;
+    padding: 4px 20px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #16181d;
+    border-radius: 20px;
+}
+
+.search-wrapper i{
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.search-wrapper input{
+    flex: 1;
+    color: #fff;
+    /* color: #4e525a; */
+    font-size: 16px;
+    background-color: #16181d;
+    border: none;
+    outline: none;
+}
+
+.user-cards{
+    padding: 26px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    gap: .25rem;
+}
+
+.card{
+    background-color: #fed47e;
+    padding: 20px 10px;
+    border-radius: 5px;
+    margin: 5px 5px;
+    color: #22242c;
+}
+
+.card-name{
+    font-size: 18px;
+    display: block;
+    white-space: nowrap;
+}
+
+.card-email{
+    font-size: 14px;
+    color: #444;
+}
+
+.hide{
+    display: none;
+}
+

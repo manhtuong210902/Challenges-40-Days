@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="search-box">
+        <div class="search-wrapper">
+            <i class='bx bx-search-alt-2'></i>
+            <input type="search" id="search" placeholder="search users" data-search>
+        </div>
+        <div class="user-cards" data-users-card-container>
+           
+        </div>
+        <template data-user-template>
+            <div class="card">
+                <h3 class="card-name" data-name></h3>
+                <p class="card-email" data-email></p>
+            </div>
+        </template>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
